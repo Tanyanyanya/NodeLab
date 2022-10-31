@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint /**/*.{js, jsx, ts, tsx}\"",
-    "prettier:fix": "prettier --write /**/*.{js, jsx, ts, tsx}",
-    "prettier:check": "prettier /**/*.{js, jsx, ts, tsx}",
+    "prettier:fix": "prettier . --write --ignore-path .gitignore",
+    "prettier:check": "prettier . --check --ignore-path .gitignore",
     "test": "jest"
   },
   "husky": {
@@ -39,10 +39,7 @@
     "typescript": "^4.8.4"
   },
   "lint-staged": {
-    "src/**/*.{ts, tsx, js, jsx}": [
-      "npm run prettier:fix",
-      "npm run lint",
-      "git add"
-    ]
+    "**/*.js": "eslint",
+    "*": "prettier --check --ignore-path .gitignore"
   }
 }
