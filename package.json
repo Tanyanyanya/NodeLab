@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "eslint /**/*.{js, jsx, ts, tsx}\"",
     "prettier:fix": "prettier . --write --ignore-path .gitignore",
-    "prettier:check": "prettier . --check --ignore-path .gitignore",
-    "test": "jest"
+    "prettier:check": "prettier . --check --ignore-path .gitignore"
   },
   "husky": {
     "hooks": {
@@ -17,9 +16,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "jest": "^29.2.2"
-  },
   "devDependencies": {
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
