@@ -1,0 +1,42 @@
+{
+  "name": "noda",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint /**/*.{js, jsx, ts, tsx}\"",
+    "prettier:fix": "prettier . --write --ignore-path .gitignore",
+    "prettier:check": "prettier . --check --ignore-path .gitignore",
+    "start": "node src/router.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier:fix && git add -A ."
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/async": "^3.2.15",
+    "async": "^3.2.4",
+    "esm": "^3.2.25",
+    "http": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.16.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "**/*.js": "eslint",
+    "*": "prettier --check --ignore-path .gitignore"
+  }
+}
