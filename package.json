@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint /**/*.{js, jsx, ts, tsx}\"",
+    "lint": "eslint **/*.js --ignore-path .gitignore",
+    "lint:fix": "eslint **/*.js --fix --ignore-path .gitignore",
     "prettier:fix": "prettier . --write --ignore-path .gitignore",
     "prettier:check": "prettier . --check --ignore-path .gitignore",
     "test": "jest"
